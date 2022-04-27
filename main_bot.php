@@ -87,6 +87,9 @@ if((!empty($update->text)) and (strpos($update->text,'/')===0)){
         case '/help':
             $bot->sendMessage(new Message(StaticText::getText('help')),$customer_id);
             break;
+        case '/changelog':
+            $bot->sendMessage(new Message(StaticText::getText('change_notes')),$customer_id);
+            break;
         case '/edit':
             $user_bots=$botDB->getBotsByUserID($customer_id);
             if(!$user_bots){
