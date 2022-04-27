@@ -2,6 +2,7 @@
 /**
  * Class wrapper for working with PDO
  */
+
 class DB
 {
     /**
@@ -9,12 +10,12 @@ class DB
      * Лучше выносить в конфиг
      * self::DB_HOST -> Config::DB_HOST
      */
-    const DB_HOST = '127.0.0.1'; // localhost
-    const DB_USER = 'root';
-    const DB_PASSWORD = 'HhfSwj8QH#KAv';
-    const DB_NAME = 'bots';
-    const CHARSET = 'utf8';
-    const DB_PREFIX = '';
+    const DB_HOST = DB_CONFIG::DB_HOST; // localhost
+    const DB_USER = DB_CONFIG::DB_USER;
+    const DB_PASSWORD = DB_CONFIG::DB_PASSWORD;
+    const DB_NAME = DB_CONFIG::DB_NAME;
+    const CHARSET = DB_CONFIG::CHARSET;
+    const DB_PREFIX = DB_CONFIG::DB_PREFIX;
 
     /**
      * @var PDO

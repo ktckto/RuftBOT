@@ -1,15 +1,6 @@
 <?php
 require ('class/load.php');
-$config=[
-    'main'=>[
-        'token'=>'1178883535:AAF-UVN5lu1ubzcVbWWKPvXv60mjQ1EIyFY'
-    ],
-    'hcaptcha'=>[
-        'public'=>'064e99dc-67ad-4f8b-97cc-69d163d2e8c0',
-        'secret'=>'0xd02a7e9CD3EA2e45CAd97b909AA6A28672394d6d'
-    ]
-];
-
+require('config.php');
 function checkCaptcha($SECRET_KEY){
 $data = array(
     'secret' => $SECRET_KEY,

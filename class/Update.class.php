@@ -34,6 +34,9 @@ class Update {
             $this->message_id=$this->message['message_id'];
             $this->user_id=$this->message['from']['id'];
             $this->chat_id=$this->message['chat']['id'];
+            if(empty($this->chat_id)){
+                $this->chat_id=$update['chat']['id'];
+            }
             if(!empty($this->message['from']['username'])){
                 $this->username=$this->message['from']['username'];
             }
@@ -71,6 +74,7 @@ class Update {
                 $this->is_reply=true;
                 $this->reply_to_message=$this->message['reply_to_message'];
             }
+
         }
         elseif(!empty($update['callback_query'])){
             $this->update_type='callback_query';
