@@ -1,6 +1,5 @@
 <?php
 require ('class/load.php');
-require('config.php');
 function checkCaptcha($SECRET_KEY){
 $data = array(
     'secret' => $SECRET_KEY,
