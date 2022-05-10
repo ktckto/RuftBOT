@@ -40,7 +40,7 @@ if(!empty($bot_id)) {
         if(empty($send_to_id)){
             $send_to_id=$update->reply_to_message['from']['id'];
         }
-        $user_bot->sendMessage(new Message('Відповідь надіслано '.$send_to_id),$admin_chat_id);
+        //$user_bot->sendMessage(new Message('Відповідь надіслано '.$send_to_id),$admin_chat_id);
         if(!$update->has_media){
             $user_bot->sendMessage(new Message($update->text),$send_to_id);
         }
@@ -76,7 +76,7 @@ if(!empty($bot_id)) {
     //else it's someone writing
     elseif($update->chat_id>0)
     {
-        $user_bot->sendMessage(new Message('Ваше повідомлення отримано!'),$customer_id);
+       // $user_bot->sendMessage(new Message('Ваше повідомлення отримано!'),$customer_id);
 
 
         {
